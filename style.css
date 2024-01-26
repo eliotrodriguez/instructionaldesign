@@ -1,0 +1,295 @@
+html, body {
+    font-family: Arial, Helvetica, sans-serif;
+    width: auto;
+    height: auto;
+}
+
+.topnav {
+    background-color:white;
+    height: 60px;
+    width: auto;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* float: right; */
+}
+
+.topnav a {
+    /* color: white; */
+    /* display: block; */
+    padding: 15px 15px;
+    text-decoration: none;
+    /* text-align: center; */
+}
+
+.toplist {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    /* text-align: right; */
+}
+
+.toplist li {
+    display: inline-block;
+    /* margin-right: 20px; */
+    /* color: white; */
+}
+
+.toplist li:last-child {
+    margin-right: 0;
+    /* color: white; */
+}
+
+.toplist li a {
+    display: block;
+    padding: 14px 16px;
+    color: #283044;
+    text-decoration: none;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 16px;
+}
+
+.toplist li a:hover {
+    background-color: initial;
+    color: #283044;
+}
+
+.brand-picture {
+    max-height: 100%;
+    max-width: 100px;
+    margin-right: auto;
+}
+
+.linkedin-picture {
+    height: 40px;
+    max-width: 100px;
+    margin-left: auto;
+}
+
+.navbar {
+    background-color:white;
+    height: 60px;
+    width: auto;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;   
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto;
+    gap: 20px;
+    width: 80%;
+    max-width: 1080px;
+    margin: 20px auto;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow: hidden; /*Ensures content doesn't overflow horizontally*/
+}
+
+.left-column {
+    grid-column: 1;
+}
+
+.right-column {
+    order: 2;
+    grid-row: span;
+    width: 100%;
+    height: auto;
+    /* margin-top: 20px; */
+    /* background-color: lightgray; */
+}
+
+.right-column img{
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.left-row-top {
+    font-size: 50px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #78a1bb;
+}
+
+.left-row {
+    font-size: 24px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #78a1bb;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-areas: 
+    'header header'
+    'left right';
+}
+
+.grid-container > div {
+    padding: 20px; 
+}
+
+.item1 {
+    grid-area: header;
+    text-align: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    /* color: #78a1bb; */
+}
+
+.item2 {
+    grid-area: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: left;
+    text-align: left;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #78a1bb;
+}
+
+.item3 {
+    grid-area: right;
+}
+
+.special-font {
+    color: #283044;
+}
+
+.font1 {
+    color: #283044;
+}
+
+.header1font {
+    color: #283044;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.header2font {
+    color: #283044;
+    font-weight: 500;
+}
+
+.bottomlist {
+    background-color:#283044;
+    height: auto;
+    width: auto;
+    align-items: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 10px;
+    overflow: hidden;
+}
+
+.contactbutton {
+    padding: 15px 15px;
+    border: none;
+    border-radius: 30px;
+    text-align: center;
+    color: black;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition-duration: 0.4s;
+}
+
+.contactbutton:hover {
+    background-color: green;
+}
+
+.copyright {
+    margin-right: 20px;
+    color: #283044;
+    font-size: 14px;
+}
+
+.button {
+    /* border: #283044; */
+    border-color: 1px black;
+    padding: 15px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 30px;
+    transition-duration: 0.4s;
+}
+
+.button:hover {
+    background-color: green;
+}
+
+.buttonconfig {
+    text-decoration: none;
+}
+
+.projectbutton {
+    /* border-color: 1px black; */
+    padding: 15px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    /* border-radius: 30px; */
+    transition-duration: 0.4s;
+}
+
+.projectbutton:hover {
+    background-color: green;
+}
+
+li a:hover {
+    background-color: #000;
+}
+
+.intro {
+    color: #78A1BB;
+    text-align: center;
+    font-size: 50px;
+    font-family: Brush Script MT;
+}
+
+.hline {
+    height: 10px;
+    background-color: #78A1BB;
+}
+
+
+.firstlast {
+    display: flex;
+}
+
+.borders {
+    border-radius:  1px;
+}
+
+.pictures {
+    width: 200px;
+    height: auto;
+}
+
+@media only screen and (max-width: 600px) {
+    /* Navigation bar */
+    .toplist li {
+        display: block;
+        text-align: center;
+    }
+    .toplist li a {
+        padding: 10px;
+    }
+
+    /* Container */
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+    .right-column {
+        order:2;
+    }
+
+    /* Featured projects grid */
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+}
