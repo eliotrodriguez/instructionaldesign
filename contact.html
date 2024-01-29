@@ -39,35 +39,30 @@
     </section>
 
     <form action="submitcontact.html">
-        <div class="firstlast">
-            <div>
-                <label for="firstname">First Name</label>
-            </div>
-            <div>
-                <input type="text" placeholder="John" id="firstname" name="firstname">
-            </div>
-            <div>
-                <label for="lastname">Last Name</label>
-            </div>
-            <div>
-                <input type="text" placeholder="Doe" id="lastname" name="lastname">
+        <div class="form-group">
+            <div class="name-inputs">
+                <div class="first-name">
+                    <label for="firstname">First Name</label>
+                    <input type="text" placeholder="John" id="firstname" name="firstname" required>
+                </div>
+                <div class="last-name">
+                    <label for="lastname">Last Name</label>
+                    <input type="text" placeholder="Doe" id="lastname" name="lastname" required>
+                </div>
             </div>
         </div>
-        <div>
-            <div>
+            <div class="form-group">
                 <label for="email">Email</label>
+                <input type="email" placeholder="jdoe@email.com" id="email" name="email" required>
             </div>
-            <div>
-                <input type="text" placeholder="jdoe@email.com" id="email" name="email">
+
+            <div class="form-group">
+                <label for="message">Enter Message</label>
+                <textarea id="message" name="message" rows="10" cols="80" placeholder="Enter Information Here" required>
+                </textarea> 
             </div>
-        </div>
-        <div>
-            <label for="message">Enter Message</label>
-        </div>
-        <div>
-            <textarea id="message" name="message" rows="10" cols="100">Enter Information Here</textarea> 
-        </div>
-        <div >
+
+        <div class="form-group">
             <input type="submit" value="Submit Information" name="submit" id="submit">
         </div>            
         
