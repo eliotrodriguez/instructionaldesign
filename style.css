@@ -206,7 +206,8 @@ html, body {
     font-size: 14px;
 }
 
-.button {
+.button,
+input[type="submit"] {
     /* border: #283044; */
     border-color: 1px black;
     padding: 15px 15px;
@@ -255,11 +256,6 @@ li a:hover {
     background-color: #78A1BB;
 }
 
-
-.firstlast {
-    display: flex;
-}
-
 .borders {
     border-radius:  1px;
 }
@@ -291,5 +287,77 @@ li a:hover {
     /* Featured projects grid */
     .grid-container {
         grid-template-columns: 1fr;
+    }
+}
+
+input[type="text"] ,
+input[type="email"] {
+    width: 80%;
+    max-width: 100%;
+    padding: 10px;
+    border: 0px solid;
+    background-color: #BFA89E;
+    color: #333;
+    font-size: 20px;
+    font-family: roboto;
+}
+
+textarea {
+    width: 80%;
+    max-width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    border: 0px solid;
+    background-color: #BFA89E;
+    color: #333;
+    font-size: 20px;
+    font-family: roboto;
+    overflow-x: hidden;
+}
+
+input[type="text"]::placeholder,
+input[type="email"]::placeholder, 
+textarea::placeholder {
+    color: #999;
+}
+
+.placeholder {
+    display: none;
+}
+
+textarea:focus + .placeholder,
+textarea:empty + .placeholder {
+    display: inline;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+}
+
+.name-inputs {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.first-name,
+.last-name,
+.form-group {
+    width: 100%;
+}
+.first-name,
+.last-name {
+    flex: 1;
+    margin-bottom: 10px;
+}
+@media only screen and (min-width: 600px) {
+    .first-name,
+    .last-name {
+        width: calc(50% - 5px);
+        margin-bottom: 0;
     }
 }
