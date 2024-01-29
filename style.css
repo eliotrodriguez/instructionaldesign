@@ -4,6 +4,7 @@ html, body {
     height: auto;
 }
 
+/* CSS for the navbar and the lists inside them */
 .topnav {
     background-color:white;
     height: 60px;
@@ -78,6 +79,10 @@ html, body {
     align-items: center;   
 }
 
+/* End nav and list CSS*/
+
+/* For the Index.html page */
+
 .container {
     display: grid;
     grid-template-columns: 1fr auto;
@@ -88,7 +93,7 @@ html, body {
     margin: 20px auto;
     padding: 20px;
     box-sizing: border-box;
-    overflow: hidden; /*Ensures content doesn't overflow horizontally*/
+    overflow: hidden; 
 }
 
 .left-column {
@@ -184,6 +189,8 @@ html, body {
     overflow: hidden;
 }
 
+/* Beginning of Buttons */
+
 .contactbutton {
     padding: 15px 15px;
     border: none;
@@ -209,7 +216,7 @@ html, body {
 .button,
 input[type="submit"] {
     /* border: #283044; */
-    border-color: 1px black;
+    /* border-color: 1px black; */
     padding: 15px 15px;
     text-align: center;
     text-decoration: none;
@@ -239,6 +246,23 @@ input[type="submit"] {
 .projectbutton:hover {
     background-color: green;
 }
+
+#submit {
+    background-color: #283044;
+    color: white;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#submit:hover {
+    background-color: #283044;
+    transform: scale(1.1);
+}
+
+/* End of Buttons */
 
 li a:hover {
     background-color: #000;
@@ -290,8 +314,16 @@ li a:hover {
     }
 }
 
-input[type="text"] ,
-input[type="email"] {
+/* Contact CSS */
+
+.contact-section {
+    font-family: roboto;
+    color: #78A1BB;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+input[type="text"] {
     width: 80%;
     max-width: 100%;
     padding: 10px;
@@ -302,8 +334,20 @@ input[type="email"] {
     font-family: roboto;
 }
 
+
+input[type="email"] {
+    width: 90%;
+    max-width: 100%;
+    padding: 10px;
+    border: 0px solid;
+    background-color: #BFA89E;
+    color: #333;
+    font-size: 20px;
+    font-family: roboto;
+}
+
 textarea {
-    width: 80%;
+    width: 93%;
     max-width: 100%;
     box-sizing: border-box;
     padding: 10px;
@@ -332,11 +376,15 @@ textarea:empty + .placeholder {
 
 .form-group {
     margin-bottom: 20px;
+    flex-basis: calc(33.33% - 10px);
 }
 
 label {
     display: block;
+    margin-bottom: 5px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: bold;
+    text-transform: uppercase;
 }
 
 .name-inputs {
@@ -348,7 +396,11 @@ label {
 .last-name,
 .form-group {
     width: 100%;
-}
+
+.form-group:last-child {
+    flex-basis: 100%;
+}}
+
 .first-name,
 .last-name {
     flex: 1;
@@ -361,3 +413,33 @@ label {
         margin-bottom: 0;
     }
 }
+
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contact-form-section {
+    /* display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; */
+    flex-basis: calc(50% - 10px);
+}
+
+.contact-section {
+    flex-basis: calc(50% - 10px);
+    margin-right: 20px;
+    text-align: center;
+}
+
+.contact-section p {
+    text-align: center;
+}
+
+.form-section {
+    flex: 1;
+}
+
+/* End Contact CSS */
+
