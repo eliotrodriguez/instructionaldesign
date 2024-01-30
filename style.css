@@ -71,7 +71,7 @@ html, body {
 
 .navbar {
     background-color:white;
-    height: 60px;
+    /* height: 60px; */
     width: auto;
     overflow: hidden;
     display: flex;
@@ -93,7 +93,7 @@ html, body {
     margin: 20px auto;
     padding: 20px;
     box-sizing: border-box;
-    overflow: hidden; 
+    /* overflow: hidden;  */
 }
 
 .left-column {
@@ -103,7 +103,7 @@ html, body {
 .right-column {
     order: 2;
     grid-row: span;
-    width: 100%;
+    max-width: 80%;
     height: auto;
     /* margin-top: 20px; */
     /* background-color: lightgray; */
@@ -131,11 +131,20 @@ html, body {
     grid-template-areas: 
     'header header'
     'left right';
+    /* display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto; */
+    gap: 20px;
+    width: 80%;
+    max-width: 1080px;
+    margin: 20px auto;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
-.grid-container > div {
+/* .grid-container > div {
     padding: 20px; 
-}
+} */
 
 .item1 {
     grid-area: header;
@@ -247,7 +256,8 @@ input[type="submit"] {
     background-color: green;
 }
 
-#submit {
+#submit,
+.explore-button {
     background-color: #283044;
     color: white;
     padding: 15px 20px;
@@ -257,7 +267,8 @@ input[type="submit"] {
     transition: background-color 0.3s, transform 0.3s;
 }
 
-#submit:hover {
+#submit:hover,
+.explore-button:hover {
     background-color: #283044;
     transform: scale(1.1);
 }
@@ -286,7 +297,7 @@ li a:hover {
 
 .pictures {
     width: 200px;
-    height: auto;
+    /* height: auto; */
 }
 
 @media only screen and (max-width: 600px) {
@@ -316,8 +327,19 @@ li a:hover {
 
 /* Contact CSS */
 
+.contact-table {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    /* max-width: 500px; */
+    margin: 0 auto;
+}
+
 .contact-section {
     font-family: roboto;
+    width: 80%;
+    max-width: 500px;
     color: #78A1BB;
     margin-bottom: 10px;
     font-size: 20px;
@@ -357,6 +379,7 @@ textarea {
     font-size: 20px;
     font-family: roboto;
     overflow-x: hidden;
+    resize: none;
 }
 
 input[type="text"]::placeholder,
@@ -376,7 +399,8 @@ textarea:empty + .placeholder {
 
 .form-group {
     margin-bottom: 20px;
-    flex-basis: calc(33.33% - 10px);
+    /* flex-basis: calc(33.33% - 10px); */
+    width: 100%;
 }
 
 label {
@@ -406,35 +430,38 @@ label {
     flex: 1;
     margin-bottom: 10px;
 }
+
+.main-content {
+    /* background-color: black; */
+    width: 100%;
+    margin-top: 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1080px;
+}
+
 @media only screen and (min-width: 600px) {
-    .first-name,
-    .last-name {
-        width: calc(50% - 5px);
-        margin-bottom: 0;
+    .main-content {
+        flex-direction: row; /* Change to row layout on larger screens */
+        justify-content: space-between; /* Add space between elements */
+    }
+
+    .form-section {
+        flex: 0 0 50%; /* Set form section to take up 50% of the width */
+        margin-right: 20px; /* Add some space between form and paragraph */
+    }
+
+    .contact-section {
+        flex: 0 0 45%; /* Set paragraph section to take up 45% of the width */
     }
 }
 
-.main-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.contact-form-section {
-    /* display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between; */
-    flex-basis: calc(50% - 10px);
-}
-
 .contact-section {
-    flex-basis: calc(50% - 10px);
-    margin-right: 20px;
-    text-align: center;
-}
-
-.contact-section p {
-    text-align: center;
+    /* text-align: left; */
+    text-align: left;
+    margin-left: 5%;
+    padding-right: 10px;
 }
 
 .form-section {
