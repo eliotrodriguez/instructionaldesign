@@ -112,6 +112,8 @@ html, body {
 .right-column img{
     border-radius: 50%;
     overflow: hidden;
+    max-width: 100%;
+    height: auto;
 }
 
 .left-row-top {
@@ -142,9 +144,6 @@ html, body {
     box-sizing: border-box;
 }
 
-/* .grid-container > div {
-    padding: 20px; 
-} */
 
 .item1 {
     grid-area: header;
@@ -166,6 +165,22 @@ html, body {
 
 .item3 {
     grid-area: right;
+}
+
+.item3 img {
+    max-width: 100%; /* Ensure the image doesn't exceed its container width */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Ensure proper rendering */
+    margin: 0 auto; /* Center the image horizontally */
+}
+
+@media only screen and (max-width: 600px) {
+    .grid-container {
+        grid-template-areas: 
+        'header'
+        'left'
+        'right'; /* Change the layout to stack items vertically */
+    }
 }
 
 .special-font {
