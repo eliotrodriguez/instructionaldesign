@@ -563,3 +563,148 @@ label {
 }
 
 /* End About Me */
+
+/* Beginning of Portfolio CSS */
+
+.div p {
+    max-width: 1080px;
+}
+
+.container-portfolio {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto;
+    gap: 20px;
+    width: 80%;
+    max-width: 1080px;
+    margin: 20px auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.left-column-portfolio {
+    grid-column: 1;
+    /* background-color: orange; */
+}
+
+.right-column-portfolio {
+    order: 1;
+    grid-row: span;
+    max-width: 80%;
+    height: auto;
+    /* background-color: blue; */
+}
+
+.left-column-portfolio img {
+    max-width: 400px;
+    max-height: 300px;
+}
+
+.explore-project {
+    text-align: center;
+}
+
+.container-problem,
+.container-solution,
+.container-process {
+    display: flex;
+    flex-wrap: wrap;
+    /* grid-template-rows: auto; */
+    gap: 20px;
+    width: 80%;
+    max-width: 1080px;
+    margin: 20px auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+
+.left-column-problem {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.left-column-problem p {
+    max-width: 100%;
+    word-wrap: break-word;
+    overflow: hidden;
+}
+
+.right-column-problem{
+    flex: 1;
+    min-width: 300px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.right-column-problem img {
+    max-width: 100%; /* Ensure the image doesn't exceed its container width */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Ensure proper rendering */
+    margin-bottom: 20px; /* Add some space below the image */
+}
+
+.image-container {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.image-media-container,
+.image-visualmock-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.image-media-container img,
+.image-visualmock-container img {
+    max-width: 30%;
+    height: auto;
+}
+
+.classroom-pic img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.mindmeister-pic {
+    max-width: 100%;
+    text-align: center;
+}
+
+.mindmeister-pic img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+@media only screen and (max-width: 600px) {
+    .container-problem {
+        flex-direction: column; /* Stack columns on top of each other on smaller screens */
+    }
+
+    .right-column-problem {
+        margin-top: 0; /* Reset margin-top on smaller screens */
+    }
+}
+
+@media only screen and (max-width: 1080px) {
+    .image-media-container,
+    .image-visualmock-container {
+        flex-direction: column;
+    }
+
+    .image-media-container img,
+    .image-visualmock-container img {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+}
+/* Ending of Portfolio CSS */
