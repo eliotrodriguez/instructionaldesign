@@ -606,7 +606,11 @@ label {
 
 .container-problem,
 .container-solution,
-.container-process {
+.container-process,
+.container-text,
+.container-visual,
+.container-interactive,
+.container-fulldev {
     display: flex;
     flex-wrap: wrap;
     /* grid-template-rows: auto; */
@@ -680,6 +684,12 @@ label {
 }
 
 .mindmeister-pic img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.container-fulldev img {
     max-width: 100%;
     height: auto;
     display: block;
