@@ -708,7 +708,7 @@ label {
     }
 }
 
-@media only screen and (max-width: 1080px) {
+@media only screen and (max-width: 600px) {
     .image-media-container,
     .image-visualmock-container {
         flex-direction: column;
@@ -718,6 +718,15 @@ label {
     .image-visualmock-container img {
         max-width: 100%;
         margin-bottom: 20px;
+    }
+
+    .container-portfolio {
+        grid-template-columns: 1fr;
+    }
+
+    .right-column-portfolio {
+        order: 2;
+        margin-top: 20px;
     }
 }
 /* Ending of Portfolio CSS */
