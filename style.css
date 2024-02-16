@@ -496,7 +496,11 @@ label {
     align-items: center;
     background-image: url('media/ufo.jpg');
     background-size: cover;
-    background-repeat: no-repeat;
+    /* background-repeat: no-repeat; */
+}
+
+.background-content img {
+    margin: 0;
 }
 
 .content {
@@ -527,7 +531,7 @@ label {
 .aboutme-video {
     /* background-color: orange; */
     flex: 0 0 auto;
-    padding: 0 10px;
+    padding: 10px 10px;
     box-sizing: border-box;
 
 }
